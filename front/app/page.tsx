@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import SurahCard from '@/components/SurahCard';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const [data, setData] = useState<any>([]);
@@ -28,7 +29,7 @@ export default function Home() {
   if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>;
 
   return (
-    <div className="min-h-screen h-full w-full flex flex-col items-center pb-10">
+    <div className="min-h-screen h-full w-full flex flex-col items-center pb-20 relative">
       <Header title={'Ыйык Куран'} />
       <div className="w-[85%] max-md:w-[65%] max-sm:w-[90%] flex flex-col gap-2 items-center">
         <SurahCard title={'Сүрөлөр'} center={true} />
@@ -58,6 +59,7 @@ export default function Home() {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

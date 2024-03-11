@@ -6,6 +6,7 @@ import { SetStateAction, useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Header from '@/components/Header';
 import Loading from '@/components/Loading';
+import Footer from '@/components/Footer';
 
 const Surah = ({ params }: { params: { surah: string } }) => {
   const [data, setData] = useState([]);
@@ -81,7 +82,7 @@ const Surah = ({ params }: { params: { surah: string } }) => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="flex flex-col pb-20 gap-2 min-h-screen h-full">
+        <div className="flex flex-col pb-20 gap-2 min-h-screen h-full relative">
           {/* <div> */}
           <Header title={surah} back={true} />
 
@@ -141,6 +142,7 @@ const Surah = ({ params }: { params: { surah: string } }) => {
               </div>
             );
           })}
+          <Footer />
         </div>
       )}
     </>

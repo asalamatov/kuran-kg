@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0lrk1jdvnw_k8woh+^)5%@lxo+v6*9-1jgrx^hrggz$l5=8kli'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '128.0.0.1', '.ngrok-free.app', 'kuran-kg-front.vercel.app', 'kuran.kg']
+ALLOWED_HOSTS = ['localhost', '128.0.0.1', '.ngrok-free.app', 'kuran-kg-front.vercel.app', 'kuran.kg', 'kuran-kg.vercel.app']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'basic_endpoints',
+    'home_endpoint',
     'corsheaders',
     'import_export',
 ]
