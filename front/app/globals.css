@@ -1,0 +1,528 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.audio-player {
+  --player-button-width: 3em;
+  --sound-button-width: 2em;
+  --space: .5em;
+  /* width: 15rem; */
+  /* height: 15rem; */
+}
+
+.player-button {
+  background-color: transparent;
+  border: 0;
+  width: var(--player-button-width);
+  height: var(--player-button-width);
+  cursor: pointer;
+  padding: 0;
+}
+
+@font-face {
+  font-family: SurahNames;
+  src: url('../assets/arabic_surah_font.ttf') format('truetype'), url('../assets/arabic_surah_font.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'uthmanic';
+  src: url('../assets/uthmanic_hafs.ttf') format('truetype'), url('../assets/uthmanic_hafs.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* .uthmanic {
+  font-family: 'uthmanic';
+  font-size: 2.5rem;
+  max-width: 100%;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'bismillah';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../assets/bismillah.woff') format("woff"), url('../assets/bismillah.ttf') format("truetype");
+} */
+
+.bismillah {
+  font-family: 'bismillah';
+  text-align: center;
+  font-size: 2.5rem;
+  max-width: 100%;
+}
+
+.ql-arabic {
+  font-family: SurahNames!important;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 25px;
+  float: right;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ql-arabic-59:before {
+  content: "\E900"
+}
+
+.ql-arabic-60:before {
+  content: "\E901"
+}
+
+.ql-arabic-48:before {
+  content: "\E902"
+}
+
+.ql-arabic-:before {
+  content: "\E903"
+}
+
+.ql-arabic-1:before {
+  content: "\E904"
+}
+
+.ql-arabic-2:before {
+  content: "\E905"
+}
+
+.ql-arabic-3:before {
+  content: "\E906"
+}
+
+.ql-arabic-4:before {
+  content: "\E907"
+}
+
+.ql-arabic-5:before {
+  content: "\E908"
+}
+
+.ql-arabic-38:before {
+  content: "\E909"
+}
+
+.ql-arabic-39:before {
+  content: "\E90A"
+}
+
+.ql-arabic-6:before {
+  content: "\E90B"
+}
+
+.ql-arabic-7:before {
+  content: "\E90C"
+}
+
+.ql-arabic-8:before {
+  content: "\E90D"
+}
+
+.ql-arabic-9:before {
+  content: "\E90E"
+}
+
+.ql-arabic-10:before {
+  content: "\E90F"
+}
+
+.ql-arabic-11:before {
+  content: "\E910"
+}
+
+.ql-arabic-12:before {
+  content: "\E911"
+}
+
+.ql-arabic-13:before {
+  content: "\E912"
+}
+
+.ql-arabic-14:before {
+  content: "\E913"
+}
+
+.ql-arabic-15:before {
+  content: "\E914"
+}
+
+.ql-arabic-16:before {
+  content: "\E915"
+}
+
+.ql-arabic-17:before {
+  content: "\E916"
+}
+
+.ql-arabic-18:before {
+  content: "\E917"
+}
+
+.ql-arabic-19:before {
+  content: "\E918"
+}
+
+.ql-arabic-20:before {
+  content: "\E919"
+}
+
+.ql-arabic-21:before {
+  content: "\E91A"
+}
+
+.ql-arabic-22:before {
+  content: "\E91B"
+}
+
+.ql-arabic-23:before {
+  content: "\E91C"
+}
+
+.ql-arabic-24:before {
+  content: "\E91D"
+}
+
+.ql-arabic-25:before {
+  content: "\E91E"
+}
+
+.ql-arabic-26:before {
+  content: "\E91F"
+}
+
+.ql-arabic-27:before {
+  content: "\E920"
+}
+
+.ql-arabic-28:before {
+  content: "\E921"
+}
+
+.ql-arabic-29:before {
+  content: "\E922"
+}
+
+.ql-arabic-30:before {
+  content: "\E923"
+}
+
+.ql-arabic-31:before {
+  content: "\E924"
+}
+
+.ql-arabic-32:before {
+  content: "\E925"
+}
+
+.ql-arabic-33:before {
+  content: "\E926"
+}
+
+.ql-arabic-40:before {
+  content: "\E927"
+}
+
+.ql-arabic-41:before {
+  content: "\E928"
+}
+
+.ql-arabic-42:before {
+  content: "\E929"
+}
+
+.ql-arabic-43:before {
+  content: "\E92A"
+}
+
+.ql-arabic-44:before {
+  content: "\E92B"
+}
+
+.ql-arabic-45:before {
+  content: "\E92C"
+}
+
+.ql-arabic-46:before {
+  content: "\E92D"
+}
+
+.ql-arabic-34:before {
+  content: "\E92E"
+}
+
+.ql-arabic-35:before {
+  content: "\E92F"
+}
+
+.ql-arabic-36:before {
+  content: "\E930"
+}
+
+.ql-arabic-37:before {
+  content: "\E931"
+}
+
+.ql-arabic-47:before {
+  content: "\E932"
+}
+
+.ql-arabic-49:before {
+  content: "\E933"
+}
+
+.ql-arabic-50:before {
+  content: "\E934"
+}
+
+.ql-arabic-51:before {
+  content: "\E935"
+}
+
+.ql-arabic-52:before {
+  content: "\E936"
+}
+
+.ql-arabic-53:before {
+  content: "\E937"
+}
+
+.ql-arabic-54:before {
+  content: "\E938"
+}
+
+.ql-arabic-55:before {
+  content: "\E939"
+}
+
+.ql-arabic-56:before {
+  content: "\E93A"
+}
+
+.ql-arabic-57:before {
+  content: "\E93B"
+}
+
+.ql-arabic-58:before {
+  content: "\E93C"
+}
+
+.ql-arabic-79:before {
+  content: "\E93D"
+}
+
+.ql-arabic-80:before {
+  content: "\E93E"
+}
+
+.ql-arabic-81:before {
+  content: "\E93F"
+}
+
+.ql-arabic-82:before {
+  content: "\E940"
+}
+
+.ql-arabic-61:before {
+  content: "\E941"
+}
+
+.ql-arabic-62:before {
+  content: "\E942"
+}
+
+.ql-arabic-63:before {
+  content: "\E943"
+}
+
+.ql-arabic-64:before {
+  content: "\E944"
+}
+
+.ql-arabic-65:before {
+  content: "\E945"
+}
+
+.ql-arabic-66:before {
+  content: "\E946"
+}
+
+.ql-arabic-67:before {
+  content: "\E947"
+}
+
+.ql-arabic-68:before {
+  content: "\E948"
+}
+
+.ql-arabic-69:before {
+  content: "\E949"
+}
+
+.ql-arabic-70:before {
+  content: "\E94A"
+}
+
+.ql-arabic-71:before {
+  content: "\E94B"
+}
+
+.ql-arabic-72:before {
+  content: "\E94C"
+}
+
+.ql-arabic-73:before {
+  content: "\E94D"
+}
+
+.ql-arabic-74:before {
+  content: "\E94E"
+}
+
+.ql-arabic-75:before {
+  content: "\E94F"
+}
+
+.ql-arabic-76:before {
+  content: "\E950"
+}
+
+.ql-arabic-77:before {
+  content: "\E951"
+}
+
+.ql-arabic-78:before {
+  content: "\E952"
+}
+
+.ql-arabic-83:before {
+  content: "\E953"
+}
+
+.ql-arabic-84:before {
+  content: "\E954"
+}
+
+.ql-arabic-85:before {
+  content: "\E955"
+}
+
+.ql-arabic-86:before {
+  content: "\E956"
+}
+
+.ql-arabic-87:before {
+  content: "\E957"
+}
+
+.ql-arabic-88:before {
+  content: "\E958"
+}
+
+.ql-arabic-89:before {
+  content: "\E959"
+}
+
+.ql-arabic-90:before {
+  content: "\E95A"
+}
+
+.ql-arabic-91:before {
+  content: "\E95B"
+}
+
+.ql-arabic-92:before {
+  content: "\E95C"
+}
+
+.ql-arabic-93:before {
+  content: "\E95D"
+}
+
+.ql-arabic-94:before {
+  content: "\E95E"
+}
+
+.ql-arabic-95:before {
+  content: "\E95F"
+}
+
+.ql-arabic-96:before {
+  content: "\E960"
+}
+
+.ql-arabic-97:before {
+  content: "\E961"
+}
+
+.ql-arabic-98:before {
+  content: "\E962"
+}
+
+.ql-arabic-99:before {
+  content: "\E963"
+}
+
+.ql-arabic-100:before {
+  content: "\E964"
+}
+
+.ql-arabic-101:before {
+  content: "\E965"
+}
+
+.ql-arabic-102:before {
+  content: "\E966"
+}
+
+.ql-arabic-103:before {
+  content: "\E967"
+}
+
+.ql-arabic-104:before {
+  content: "\E968"
+}
+
+.ql-arabic-105:before {
+  content: "\E969"
+}
+
+.ql-arabic-106:before {
+  content: "\E96A"
+}
+
+.ql-arabic-107:before {
+  content: "\E96B"
+}
+
+.ql-arabic-108:before {
+  content: "\E96C"
+}
+
+.ql-arabic-109:before {
+  content: "\E96D"
+}
+
+.ql-arabic-110:before {
+  content: "\E96E"
+}
+
+.ql-arabic-111:before {
+  content: "\E96F"
+}
+
+.ql-arabic-112:before {
+  content: "\E970"
+}
+
+.ql-arabic-113:before {
+  content: "\E971"
+}
+
+.ql-arabic-114:before {
+  content: "\E972"
+}
